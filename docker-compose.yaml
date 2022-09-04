@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    image: 'zipapp:latest'
+    build:
+      context: .
+    environment:
+      - SPRING_PROFILE_ACTIVE=dev
+    ports:
+      - "8080:8080"
